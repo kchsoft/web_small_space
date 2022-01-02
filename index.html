@@ -2,10 +2,14 @@
 <html>
     <mate lang=ko/kr">
     <meta charset="utf-8">
+
     <head>
-        <title>BoxModel2</title>
+        <title>Web</title>
         <link rel="stylesheet" href="style.css">
+        
     </head>
+
+
     <body>
         
        
@@ -19,13 +23,32 @@
 
         this is test sentence<br>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum eos optio necessitatibus. Iure voluptatibus saepe, at repellendus nihil modi accusamus illo fugit. Sit laudantium repellendus saepe tempore numquam magni ratione.
-        one more test
     </div>
 
+   
+    <input id="night_day" type="button" value="Night" onclick="
+    var b = document.querySelector('body');
+    var o = document.querySelector('ol');
+    var h = document.querySelector('h1');
+    if(this.value === 'Night')
+    {
+        b.style.backgroundColor='gray';
+        b.style.color='white';
+        o.style.borderRightColor='white';
+         h.style.borderBottomColor='white';
+        this.value='Day';
+    }
+    else if(this.value === 'Day')
+    {
+        b.style.backgroundColor='white';
+        b.style.color='black';
+        o.style.borderRightColor='black';
+        h.style.borderBottomColor='black';
+        this.value='Night';  
+    }
+    ">
+
+
+
     </body>
-
-
-
-
-
 </html>
