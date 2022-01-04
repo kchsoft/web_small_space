@@ -7,46 +7,76 @@
         <title>Web</title>
         <link rel="stylesheet" href="style.css">
         
+        <script>
+
+
+        function getTodayDate()
+        {
+            var date = new Date();
+            // 요일
+            var DayArray = new Array();
+            DayArray[0] = '일'; DayArray[1] = '월'; DayArray[2] = '화'; DayArray[3] = '수'; 
+            DayArray[4] = '목'; DayArray[5] = '금'; DayArray[6] = '토';
+
+            // 금일 날짜 출력
+            document.write(date.getFullYear()+'년 ');
+            document.write(date.getMonth()+1+'월 ');
+            document.write(date.getDate()+'일 ');
+            document.write(date.getHours()+'시 ');
+            document.write(date.getMinutes()+'분 <br>');
+            document.write(DayArray[date.getDay()]+'요일');
+        }   
+        
+        getTodayDate();
+        </script>
+    
     </head>
 
 
     <body>
-        
+        <h1>코드사전</h1>
        
-        <h1>WEB</h1>
+        
     <div id="grid"> 
-        <ol>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ol>
+        <ul>
+            <li>C key</li>
+            <li>D key</li>
+            <li>E key</li>
+            <li>F key</li>
+            <li>G key</li>
+            <li>A key</li>
+            <li>B key</li>
+            <br>
+            <input id="night_day" type="button" value="Night" onclick="
+            var b = document.querySelector('body');
+            var o = document.querySelector('ul');
+            var h = document.querySelector('h1');
+            if(this.value === 'Night')
+            {
+                b.style.backgroundColor='gray';
+                b.style.color='white';
+                o.style.borderRightColor='white';
+                 h.style.borderBottomColor='white';
+                this.value='Day';
+            }
+            else if(this.value === 'Day')
+            {
+                b.style.backgroundColor='white';
+                b.style.color='black';
+                o.style.borderRightColor='black';
+                h.style.borderBottomColor='black';
+                this.value='Night';  
+            }
+            ">
+        </ul>
 
         this is test sentence<br>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum eos optio necessitatibus. Iure voluptatibus saepe, at repellendus nihil modi accusamus illo fugit. Sit laudantium repellendus saepe tempore numquam magni ratione.
+        
     </div>
 
+    
    
-    <input id="night_day" type="button" value="Night" onclick="
-    var b = document.querySelector('body');
-    var o = document.querySelector('ol');
-    var h = document.querySelector('h1');
-    if(this.value === 'Night')
-    {
-        b.style.backgroundColor='gray';
-        b.style.color='white';
-        o.style.borderRightColor='white';
-         h.style.borderBottomColor='white';
-        this.value='Day';
-    }
-    else if(this.value === 'Day')
-    {
-        b.style.backgroundColor='white';
-        b.style.color='black';
-        o.style.borderRightColor='black';
-        h.style.borderBottomColor='black';
-        this.value='Night';  
-    }
-    ">
+    
 
 
 
