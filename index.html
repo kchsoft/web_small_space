@@ -1,84 +1,45 @@
 <!DOCTYPE html>
-<html>
-    <mate lang="ko/kr">
-    <meta charset="utf-8">
+<html lang="ko">
 
-    <head>
-        <title>Web</title>
-        <link rel="stylesheet" href="style.css">
-        
-        <script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet"> <!-- Web-font -->
 
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/background-image.css">
 
-        function getTodayDate()
-        {
-            var date = new Date();
-            // 요일
-            var DayArray = new Array();
-            DayArray[0] = '일'; DayArray[1] = '월'; DayArray[2] = '화'; DayArray[3] = '수'; 
-            DayArray[4] = '목'; DayArray[5] = '금'; DayArray[6] = '토';
+    <title>Momentum</title>
 
-            // 금일 날짜 출력
-            document.write(date.getFullYear()+'년 ');
-            document.write(date.getMonth()+1+'월 ');
-            document.write(date.getDate()+'일 ');
-            document.write(date.getHours()+'시 ');
-            document.write(date.getMinutes()+'분 <br>');
-            document.write(DayArray[date.getDay()]+'요일');
-        }   
-        
-        getTodayDate();
-        </script>
-    
-    </head>
+</head>
 
+<body class="">
+    <h2 id="clock"></h2>
+    <form id="login-form" class="hidden">
+        <input maxlength="15" type="text" placeholder="what is your name?" required />
+        <input type="submit" value="Log In">
+    </form>
 
-    <body>
-        <h1>코드사전</h1>
-       
-        
-    <div id="grid"> 
-        <ul>
-            <li>C key</li>
-            <li>D key</li>
-            <li>E key</li>
-            <li>F key</li>
-            <li>G key</li>
-            <li>A key</li>
-            <li>B key</li>
-            <br>
-            <input id="night_day" type="button" value="Night" onclick="
-            var b = document.querySelector('body');
-            var o = document.querySelector('ul');
-            var h = document.querySelector('h1');
-            if(this.value === 'Night')
-            {
-                b.style.backgroundColor='gray';
-                b.style.color='white';
-                o.style.borderRightColor='white';
-                 h.style.borderBottomColor='white';
-                this.value='Day';
-            }
-            else if(this.value === 'Day')
-            {
-                b.style.backgroundColor='white';
-                b.style.color='black';
-                o.style.borderRightColor='black';
-                h.style.borderBottomColor='black';
-                this.value='Night';  
-            }
-            ">
-        </ul>
-
-        this is test sentence<br>
-        
+    <h1 id="greeting" class="hidden"></h1>
+    <form id="todo-form">
+        <input type="text" placeholder="Write a To Do and Press Enter" required />
+    </form>
+    <ul id="todo-list"></ul>
+    <div id="weather">
+        <span></span>
+        <span></span>
     </div>
+    <div id="quote">
+        <span></span>
+        <br>
+        <span></span>
+    </div>
+    <script src="JavaScript/background.js"></script>
+    <script src="JavaScript/greeting.js"></script>
+    <script src="JavaScript/clock.js"></script>
+    <script src="JavaScript/quotes.js"></script>
+    <script src="JavaScript/todo.js"></script>
+    <script src="JavaScript/weather.js"></script>
+</body>
 
-    
-   
-    
-
-
-
-    </body>
 </html>
